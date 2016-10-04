@@ -4,7 +4,7 @@
 
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <link rel ="stylesheet" type = "text/css" href = "home.css"></link>
+    <link rel ="stylesheet" type = "text/css" href = "../css/home.css"></link>
   </head>
 
   <body>
@@ -19,7 +19,7 @@
           <li><a href="home.html">Home</a></li>
           <li><a href="profile.php">Profile</a></li>
           <li><a href = "chat.php">Chat</a></li>
-          <li><a href="newTopic.html">New Topic</a></li>
+          <li><a href="../html/newTopic.html">New Topic</a></li>
         </ul>
       </div>
 
