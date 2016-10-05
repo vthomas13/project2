@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML Form</title>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" href="../css/loginPage.css"/>
+</head>
+<body>
+    <div id = "navDiv">
+      <ul>
+        <div id = "leftNavDiv">
+        <li><a href="../php/home.php">Home</a></li>
+        <li><a href="profile.php">Profile</a></li>
+        <li><a href = "chat.php">Chat</a></li>
+        <li><a href="../html/newTopic.html">New Topic</a></li>
+        </div>
+        <li id ="loginButton"><a href="../html/loginPage.html">Log In</a></li>
+      </ul>
+    </div>
+    <div id ="loginDiv">
+     <form action="http://codd.cs.gsu.edu/~vthomas13/Assignments/PRO2/php/loginPage.php" method="post">
+      <fieldset id = "loginInfo">
+        <legend><strong>Sign In:</strong></legend>
+
+        <p><label for="username">Username: </label>
+          <input name = "username" id="username" type="text" placeholder="Username" /></p>
+        <p><label for="password">Password:</label>
+            <input name = "password" id="password" type="password" placeholder="Password"/>
+        </p>
+        <p>
+          <input type="submit" value="Sign In" />
+        </p>
+      </fieldset>
+     </form>
+    </div>
+
+</body>
+</html>

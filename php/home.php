@@ -20,6 +20,7 @@
           <li><a href="profile.php">Profile</a></li>
           <li><a href = "chat.php">Chat</a></li>
           <li><a href="../html/newTopic.html">New Topic</a></li>
+          <li id ="loginButton"><a href="../html/loginPage.html">Log In</a></li>
         </ul>
       </div>
 
