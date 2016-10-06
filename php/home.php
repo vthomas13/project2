@@ -10,13 +10,17 @@
   <body>
 
     <?php
-
-       print htmlspecialchars(print_r($_POST,true));
+      if(isset($_POST))
+      {
+        $file = fopen("../topics.txt","w");
+        fwrite($file, $_POST);
+        fclose($file);
+      }
     ?>
 
       <div id = "navDiv">
         <ul>
-          <li><a href="home.html">Home</a></li>
+          <li><a href="../php/home.php">Home</a></li>
           <li><a href="profile.php">Profile</a></li>
           <li><a href = "chat.php">Chat</a></li>
           <li><a href="../html/newTopic.html">New Topic</a></li>

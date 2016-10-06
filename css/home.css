@@ -19,9 +19,9 @@ body
 #navDiv ul
 {
   width: 100%;
-  height: 80px;
+  height: 50px;
   background-color: #292929;
-  line-height: 80px;
+  line-height: 50px;
 }
 
 #navDiv ul li
@@ -60,9 +60,15 @@ body
   border-radius: 25px;
 }
 
+.textbox
+{
+  margin: 10px;
+}
+
 .textarea
 {
   margin: 10px;
+  width: 90%;
 }
 
 .button
