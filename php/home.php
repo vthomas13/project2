@@ -12,18 +12,26 @@
     <?php
       if(isset($_POST))
       {
-        $file = fopen("../topics.txt","w");
-        fwrite($file, $_POST);
-        fclose($file);
+        $file = '../topics.txt';
+        $current = file_get_contents($file);
+        $delimiter = "asdfqwerty123";
+        foreach ($_POST as $key => $value)
+        {
+          $current .= $value;
+          $current .= $delimiter;
+        }
+        file_put_contents($file, $current);
       }
     ?>
 
       <div id = "navDiv">
         <ul>
+          <div id = "leftNavDiv">
           <li><a href="../php/home.php">Home</a></li>
           <li><a href="profile.php">Profile</a></li>
           <li><a href = "chat.php">Chat</a></li>
           <li><a href="../html/newTopic.html">New Topic</a></li>
+        </div>
           <li id ="loginButton"><a href="../html/loginPage.html">Log In</a></li>
         </ul>
       </div>
@@ -31,15 +39,34 @@
       <br/>
 
       <div id = "centerDiv">
-        <div id = "topicDiv">
-          <h2>Topic:</h2>
-          <p>This is some info about the topic</p>
-        </div>
 
-        <div id = "topicDiv">
-          <h2>Topic</h2>
-          <p>This is some info about another topic</p>
-        </div>
+        <?php
+          $file = '../topics.txt';
+          $current = file_get_contents($file);
+          $delimiter = "asdfqwerty123";
+
+
+          if($current != "")
+          {
+            $current = explode($delimiter, $current, -1);
+            foreach ($current as $key => $value)
+            {
+              if($key % 2 == 0 && $value != PHP_EOL)
+              {
+                echo "<div id = topicDiv>";
+                echo "<h2>Topic:</h2>";
+                echo "$value";
+              }
+              else
+              {
+                echo"<h2>Description:</h2>";
+                echo "<p>$value</p>";
+                echo "</div>";
+              }
+            }
+          }
+
+        ?>
 
       </div>
 
