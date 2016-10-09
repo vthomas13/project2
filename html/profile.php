@@ -33,7 +33,16 @@
 
     <div id="profileHeader">
 
-        <img id="profilePicture"src="../images/baseprofile.jpeg">
+        <?php
+           session_start();
+           if($_SESSION["profPic"] == null){
+             echo "<img id=\"profilePicture\"src=\"../images/baseprofile.jpeg\">";
+           }else{
+             echo "<img id=\"profilePicture\"src=\"../uploads/".  $_SESSION["profPic"] ."\">";
+           }
+
+        ?>
+
 
         <form action="../php/upload.php" method="post" enctype="multipart/form-data">Change Profile Picture:
             <br>
