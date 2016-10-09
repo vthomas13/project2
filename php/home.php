@@ -28,7 +28,7 @@
         <ul>
           <div id = "leftNavDiv">
           <li><a href="../php/home.php">Home</a></li>
-          <li><a href="../html/profile.html">Profile</a></li>
+          <li><a href="../php/profile.php">Profile</a></li>
           <li><a href = "chat.php">Chat</a></li>
           <li><a href="../html/newTopic.html">New Topic</a></li>
         </div>

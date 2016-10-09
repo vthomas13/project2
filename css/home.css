@@ -1,5 +1,5 @@
 html{
-  background-image:url(../image/gradient.png);
+  background-image:url(../images/gradient.png);
   background-attachment: fixed;
   background-position: center bottom;
   background-repeat: repeat-x;
@@ -17,7 +17,7 @@ body
 }
 ul{
   padding: 0px;
-  background-image:url(../image/gradient.png);
+  background-image:url(../images/gradient.png);
   position: relative;
 }
 
@@ -54,7 +54,7 @@ ul{
 }
 #navDiv ul li:hover
 {
-  background-image:url(../image/gradient.png);
+  background-image:url(../images/gradient.png);
   transition: all 0.3s ease 0s;
 }
 #loginButton{
@@ -104,6 +104,6 @@ ul{
 
 .button:hover
 {
-  background-image:url(../image/gradient.png);
+  background-image:url(../images/gradient.png);
   transition: all 0.3s ease 0s;
 }
