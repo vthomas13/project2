@@ -6,7 +6,7 @@ function backUpChatRoom(){
     $chatPage = fopen("chat.php", "w+");
     $baseChatPage = fopen("basechat.php", "r");
 
-    $originalfile = fread($baseChatPage, filesize("/home/h3dg3wytch/Desktop/fall2016/web/project2/php/basechat.php"));
+    $originalfile = fread($baseChatPage, filesize("/home/rpetersen1/public_html/project2/php/basechat.php"));
     fwrite($chatPage, $originalfile);
 
     fclose($chatPage);
@@ -14,7 +14,7 @@ function backUpChatRoom(){
 
 }
 
-$socket = stream_socket_server("tcp://127.0.0.1:8000", $errno, $errstr);
+$socket = stream_socket_server("tcp://131.96.155.219:8000", $errno, $errstr);
 
 if (!$socket) {
   echo "$errstr ($errno)<br />\n";
@@ -37,3 +37,4 @@ if (!$socket) {
   fclose($socket);
 }
 ?>
+
