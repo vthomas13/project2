@@ -20,9 +20,7 @@
             </div>
         </ul>
     </div>
-
     <br/>
-
     <div id="content">
         
         <img id="banner" src="../images/banner.jpeg">
@@ -35,15 +33,13 @@
 
         <?php
            session_start();
-           if($_SESSION["profPic"] == null){
-             echo "<img id=\"profilePicture\"src=\"../images/baseprofile.jpeg\">";
-           }else{
+           if(isset($_SESSION["profPic"])){
              echo "<img id=\"profilePicture\"src=\"../uploads/".  $_SESSION["profPic"] ."\">";
+           }else{
+             echo "<img id=\"profilePicture\"src=\"../images/baseprofile.jpeg\">";
            }
 
         ?>
-
-
         <form action="../php/upload.php" method="post" enctype="multipart/form-data">Change Profile Picture:
             <br>
             <input type="file" name="fileToUpload" id="fileToUpload">
