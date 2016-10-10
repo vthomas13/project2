@@ -1,4 +1,3 @@
-<? php session_start(); ?>
 <!DOCTYPE html>
 <html>
 
@@ -33,9 +32,10 @@
     <div id="profileHeader">
 
         <?php
-           if(isset($_SESSION["profPic"])){
+            session_start();
+            if(isset($_SESSION["profPic"])){
              echo "<img id=\"profilePicture\"src=\"../uploads/".  $_SESSION["profPic"] ."\">";
-           }else{
+            }else{
              echo "<img id=\"profilePicture\"src=\"../images/baseprofile.jpeg\">";
            }
 
