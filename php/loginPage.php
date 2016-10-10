@@ -13,7 +13,7 @@
         <li><a href = "chat.php">Chat</a></li>
         <li><a href="../html/newTopic.html">New Topic</a></li>
         </div>
-        <li id ="loginButton"><a href="../html/loginPage.html">  Welcome<?php print " ".$_POST['username']; ?>!</a></li>
+        <li id ="loginButton"><a href="../html/loginPage.html"><?php print htmlspecialchars($_POST['username']); ?></a></li>
       </ul>
     </div>
 </body>
