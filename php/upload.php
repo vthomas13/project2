@@ -15,7 +15,7 @@ if(move_uploaded_file($_FILES['fileToUpload']['tmp_name'], $target_file)){
     echo "There was an error uploading";
 }
 
-header("Location: http://localhost/project2/php/profile.php"); /* Redirect browser */
+header("Location: http://codd.cs.gsu.edu/~rpetersen1/php/profile.php"); /* Redirect browser */
 
 
 ?>

@@ -12,5 +12,5 @@ if($client === false){
 fwrite($client, $message);
 fclose($client);
 
-header("Location: http://localhost/project2/php/chat.php");
+header("Location: http://codd.cs.gsu.edu/~rpetersen1/project2/php/chat.php");
 ?>
